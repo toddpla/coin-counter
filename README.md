@@ -1,7 +1,7 @@
 # Coin Counter
 
 ## Challenge
-
+For any given value, what is the minimum UK coins you need to use to fulfil the total? For example, `£7.65` would be `3 * £2, 1 * £1, 1 * 50p, 1 * 10p, 1 * 5p.`
 ## Installation
 clone the repo and install:
 ```sh
@@ -34,7 +34,7 @@ npm test -- --coverage
 
 ## Development notes
 - The logic of interest for this challenge can found in the CoinCounter.countCoins() (copied below).
-I chose not to Google other solutions and went with this approach whereby iterating through the coins available in the currency selected.  
+I chose not to Google other solutions and went with this approach whereby iterating through the coins available in the currency selected and logging the count as number of times divisible with the remainder being passed to the next coin.  
 This logic relies on the coins being listed in descending value order. To ensure this is correct a sort function could be added to ensure this is so. e.g. `.sort((a, b) => b.value = a.value)` I felt in the current situation this would be redundant code.
 ```js
 countCoins() {
