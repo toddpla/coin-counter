@@ -16,7 +16,9 @@
     "url": "https://github.com/toddpla/coin-counter/issues"
   },
   "homepage": "https://github.com/toddpla/coin-counter#readme",
-  "dependencies": {},
+  "dependencies": {
+    "eslint-plugin-jest": "^22.2.2"
+  },
   "devDependencies": {
     "eslint": "^5.13.0",
     "jest": "^24.1.0"
