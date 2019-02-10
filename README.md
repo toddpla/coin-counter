@@ -15,8 +15,9 @@ from the root directory:
 ```sh
 npm start
 ```
-you will then be aksed to select the currency and then the amount.  
-N.B. Currently the application has only one currency; 'gbp'.
+The user will be asked to select the currency and then enter an amount.  
+Please note currently the application has only one currency available; 'gbp'.  
+
 ![demo-screenshot](docs/assets/demo-screenshot.png)
 
 ## Testing
@@ -33,7 +34,8 @@ npm test -- --coverage
 
 ## Development notes
 - The logic of interest for this challenge can found in the CoinCounter.countCoins() (copied below).
-I chose not to Google other solutions and went with this approach whereby iterating through the coins available in the currency selected.
+I chose not to Google other solutions and went with this approach whereby iterating through the coins available in the currency selected.  
+This logic relies on the coins being listed in descending value order. To ensure this is correct a sort function could be added to ensure this is so. e.g. `.sort((a, b) => b.value = a.value)` I felt in the current situation this would be redundant code.
 ```js
 countCoins() {
   let remainder = this._units;
@@ -44,7 +46,6 @@ countCoins() {
     });
 }
 ```
-This logic relies on the coins being listed in descending value order. To ensure this is correct a sort function could be added to ensure this is so. e.g. `.sort((a, b) => b.value = a.value)` But I felt in the current situation this would be redundant code.
 
 - Other than devDependencies I aimed for the application to have no dependencies however chose to use Numeral-js as a tool to validate the amount input which considering the time constraint I thought reasonable.
 
