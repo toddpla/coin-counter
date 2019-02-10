@@ -33,23 +33,23 @@ class CoinCounter {
   }
 
   countCoins() {
-    let remainder = this._units
+    let remainder = this._units;
     this._currencies[this._currency]
       .forEach(coin => {
-      coin.count = Math.floor(remainder / coin.value)
-      remainder = remainder % coin.value
-    })
+        coin.count = Math.floor(remainder / coin.value);
+        remainder = remainder % coin.value;
+      });
   }
 
   display() {
     return this._currencies[this._currency]
       .filter(coin => coin.count > 0)
       .map(coin => `${coin.count} * ${coin.name}`)
-      .join(', ')
+      .join(', ');
   }
 
   static count(currency, amount) {
-    return new this(currency, amount).display()
+    return new this(currency, amount).display();
   }
 
 }
