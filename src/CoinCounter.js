@@ -32,6 +32,26 @@ class CoinCounter {
     this._units = units;
   }
 
+  countCoins() {
+    let remainder = this._units
+    this._currencies[this._currency]
+      .forEach(coin => {
+      coin.count = Math.floor(remainder / coin.value)
+      remainder = remainder % coin.value
+    })
+  }
+
+  display() {
+    return this._currencies[this._currency]
+      .filter(coin => coin.count > 0)
+      .map(coin => `${coin.count} * ${coin.name}`)
+      .join(', ')
+  }
+
+  static count(currency, amount) {
+    return new this(currency, amount).display()
+  }
+
 }
 
 module.exports = CoinCounter;
