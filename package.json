@@ -1,0 +1,23 @@
+{
+  "name": "coin-counter",
+  "version": "1.0.0",
+  "description": "Coin counting application",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toddpla/coin-counter.git"
+  },
+  "author": "Todd Langford-Archer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toddpla/coin-counter/issues"
+  },
+  "homepage": "https://github.com/toddpla/coin-counter#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
+}
